@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbyn — Inteligência Espacial</title>
+
+  <!-- Fontes do Google: Orbitron (títulos) + Inter (corpo de texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Arquivo de estilos externo -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER — Barra de navegação fixa no topo da página
+       ============================================================ -->
+  <header class="cabecalho" id="cabecalho">
+
+    <!-- Logo e nome da empresa -->
+    <div class="logo-header">
+      <span>ORBYN</span>
+    </div>
+
+    <!-- Botão hambúrguer: aparece só no celular (via CSS) -->
+    <!-- Quando clicado, o JavaScript abre/fecha o menu -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Menu de navegação com links para as seções -->
+    <nav class="menu" id="menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#urbano">Urbano</a>
+      <a href="#agricultura">Agro</a>
+      <a href="#time">Time</a>
+      <!-- onclick chama a função abrirContato() do script.js -->
+      <button class="btn-contato" onclick="abrirContato()">Contato</button>
+    </nav>
+
+  </header>
+
+  <!-- ============================================================
+       HERO — Primeira seção, a "vitrine" do site
+       ============================================================ -->
+  <section class="hero">
+
+    <!-- Lado esquerdo: texto e botões -->
+    <div class="hero-texto">
+
+      <span class="tag">🛰️ Startup Geoespacial</span>
+
+      <h1>
+        Transformando territórios com <span class="destaque">inteligência espacial</span>
+      </h1>
+
+      <p>
+        A Orbyn utiliza imagens de satélite, inteligência artificial e análise
+        territorial para apoiar decisões mais inteligentes em cidades e áreas rurais.
+      </p>
+
+      <div class="botoes-hero">
+        <a href="#sobre" class="btn-principal">Conheça a Orbyn</a>
+        <a href="#solucoes" class="btn-secundario">Ver Soluções</a>
+      </div>
+
+    </div>
+
+    <!-- Lado direito: ilustração SVG de satélite/órbita -->
+    <div class="hero-imagem">
+      <!-- SVG desenhado inline: círculo (planeta), satélite e órbita -->
+      <svg width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+        <!-- Planeta -->
+        <circle cx="210" cy="230" r="145" fill="#0d1320" stroke="#4cc9f0" stroke-width="1.5" opacity="0.95"/>
+        <!-- Linhas de grade do planeta -->
+        <ellipse cx="210" cy="230" rx="145" ry="52" fill="none" stroke="#4cc9f0" stroke-width="0.8" opacity="0.25"/>
+        <ellipse cx="210" cy="230" rx="145" ry="100" fill="none" stroke="#4cc9f0" stroke-width="0.8" opacity="0.18"/>
+        <line x1="210" y1="85" x2="210" y2="375" stroke="#4cc9f0" stroke-width="0.8" opacity="0.25"/>
+        <line x1="65" y1="230" x2="355" y2="230" stroke="#4cc9f0" stroke-width="0.8" opacity="0.25"/>
+        <!-- Órbita tracejada -->
+        <ellipse cx="210" cy="230" rx="185" ry="185" fill="none" stroke="#4cc9f0" stroke-width="1" stroke-dasharray="6,10" opacity="0.35"/>
+        <!-- Satélite: corpo central -->
+        <rect x="178" y="52" width="64" height="32" rx="6" fill="#4cc9f0" opacity="0.92"/>
+        <!-- Satélite: painéis solares -->
+        <rect x="108" y="60" width="70" height="16" rx="4" fill="#4cc9f0" opacity="0.48"/>
+        <rect x="242" y="60" width="70" height="16" rx="4" fill="#4cc9f0" opacity="0.48"/>
+        <!-- Ponto central do satélite -->
+        <circle cx="210" cy="68" r="6" fill="#06080f"/>
+        <!-- Linha do satélite ao planeta (sinal) -->
+        <line x1="210" y1="84" x2="210" y2="175" stroke="#4cc9f0" stroke-width="1" stroke-dasharray="4,6" opacity="0.5"/>
+        <!-- Ponto de sinal no planeta -->
+        <circle cx="210" cy="175" r="4" fill="#4cc9f0" opacity="0.8"/>
+        <!-- Estrelas de fundo -->
+        <circle cx="40" cy="60" r="1.5" fill="#4cc9f0" opacity="0.6"/>
+        <circle cx="370" cy="90" r="1.5" fill="#4cc9f0" opacity="0.5"/>
+        <circle cx="380" cy="340" r="1.5" fill="#4cc9f0" opacity="0.4"/>
+        <circle cx="30" cy="320" r="1.5" fill="#4cc9f0" opacity="0.5"/>
+        <circle cx="90" cy="390" r="1" fill="#4cc9f0" opacity="0.4"/>
+        <circle cx="350" cy="380" r="1" fill="#4cc9f0" opacity="0.4"/>
+        <!-- Brilho ao redor do satélite -->
+        <circle cx="210" cy="68" r="25" fill="rgba(76,201,240,0.08)"/>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       ESTATÍSTICAS — Números que mostram o impacto do setor espacial
+       Os atributos data-* são usados pelo JavaScript para animar
+       ============================================================ -->
+  <div class="stats" id="stats">
+
+    <div class="stat-item">
+      <!-- data-alvo = valor final; data-sufixo = texto depois do número -->
+      <div class="stat-numero" data-alvo="1" data-sufixo=" tri">0</div>
+      <div class="stat-descricao">Economia espacial global projetada até 2030 — em US$</div>
+    </div>
+
+    <div class="stat-item">
+      <!-- data-prefixo = texto antes do número -->
+      <div class="stat-numero" data-alvo="6000" data-prefixo="+">0</div>
+      <div class="stat-descricao">Satélites ativos em órbita gerando dados hoje</div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-numero" data-alvo="4" data-sufixo=" bi">0</div>
+      <div class="stat-descricao">Pessoas ainda sem acesso confiável à internet via satélite</div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-numero" data-alvo="4" data-sufixo=" APIs">0</div>
+      <div class="stat-descricao">APIs abertas: NASA, ESA, INPE e Copernicus gratuitas</div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       SOBRE — Quem é a Orbyn
+       Classe "revelar" faz o JS aplicar animação quando a seção
+       entrar na tela ao rolar
+       ============================================================ -->
+  <section id="sobre" class="sobre-orbyn">
+
+    <div class="sobre-texto revelar">
+
+      <h2>Sobre a Orbyn</h2>
+
+      <p>
+        A <strong>Orbyn Environment</strong> é uma startup voltada para análise territorial
+        inteligente, utilizando geotecnologia, inteligência artificial e dados de satélite.
+      </p>
+
+      <p>
+        Nossa plataforma monitora transformações urbanas e rurais em tempo real, identificando
+        riscos ambientais, padrões de crescimento e oportunidades para desenvolvimento sustentável.
+      </p>
+
+      <p>
+        O objetivo é transformar grandes volumes de dados em informações acessíveis para governos,
+        empresas e produtores rurais — <strong>conectando o espaço à vida real.</strong>
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       SOLUÇÕES — Três seções alternadas (imagem + texto)
+       "invertida" inverte a ordem para imagem aparecer à direita
+       ============================================================ -->
+  <section id="solucoes" class="secao-destaque revelar">
+
+    <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=640&q=80"
+         alt="Monitoramento via satélite">
+
+    <div class="secao-texto">
+      <span class="secao-tag">🛰️ Monitoramento</span>
+      <h2>Análise territorial em tempo real</h2>
+      <p>
+        A base da Orbyn é a tecnologia geoespacial. A plataforma utiliza imagens de satélite,
+        dados geográficos e inteligência artificial para transformar grandes volumes de
+        informações territoriais em mapas, alertas e recomendações estratégicas.
+      </p>
+      <p>
+        Decisões podem ser tomadas com mais rapidez, precisão e embasamento real.
+      </p>
+    </div>
+
+  </section>
+
+  <section id="urbano" class="secao-destaque invertida revelar">
+
+    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=640&q=80"
+         alt="Planejamento Urbano">
+
+    <div class="secao-texto">
+      <span class="secao-tag">🏙️ Urbano</span>
+      <h2>Planejamento urbano inteligente</h2>
+      <p>
+        No ambiente urbano, a Orbyn monitora o crescimento das cidades e identifica
+        problemas de infraestrutura, ocupação irregular e áreas de risco.
+      </p>
+      <p>
+        As análises ajudam gestores públicos e empresas a planejar melhor investimentos,
+        serviços e expansão urbana de forma sustentável.
+      </p>
+    </div>
+
+  </section>
+
+  <section id="agricultura" class="secao-destaque revelar">
+
+    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=640&q=80"
+         alt="Agricultura de Precisão">
+
+    <div class="secao-texto">
+      <span class="secao-tag">🌾 Agro</span>
+      <h2>Produtividade agrícola monitorada</h2>
+      <p>
+        A Orbyn auxilia produtores rurais por meio do monitoramento de áreas agrícolas
+        utilizando imagens de satélite e inteligência artificial.
+      </p>
+      <p>
+        A plataforma analisa fatores como solo, clima, irrigação e produtividade,
+        identificando riscos e oportunidades para aumentar a eficiência da produção.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       TIME — Cards com os membros da equipe
+       ============================================================ -->
+  <section id="time" class="secao-time revelar">
+
+    <h2>Nossa Equipe</h2>
+    <p class="subtitulo">Os engenheiros por trás da Orbyn</p>
+
+    <div class="cards-time">
+
+      <div class="card-pessoa">
+        <!-- Avatar: círculo com a inicial do nome -->
+        <div class="avatar">E</div>
+        <h3>Eduardo Felix Frois Silva</h3>
+        <span>RM 574103</span>
+      </div>
+
+      <div class="card-pessoa">
+        <div class="avatar">G</div>
+        <h3>Gabriel Henique Ongarelli Reis</h3>
+        <span>RM 572636</span>
+      </div>
+
+      <div class="card-pessoa">
+        <div class="avatar">L</div>
+        <h3>Lucas Rodrigues dos Santos</h3>
+        <span>RM 571778</span>
+      </div>
+
+      <div class="card-pessoa">
+        <div class="avatar">M</div>
+        <h3>Matheus de Amorim Brito</h3>
+        <span>RM 572435</span>
+      </div>
+
+      <div class="card-pessoa">
+        <div class="avatar">T</div>
+        <h3>Thiago Gomes Nascimento</h3>
+        <span>RM 569436</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       FOOTER — Rodapé do site
+       ============================================================ -->
+  <footer>
+
+    <div class="footer-logo">ORBYN</div>
+
+    <p class="footer-texto">
+      © 2025 Orbyn Environment · FIAP Global Solutions<br>
+      Engenharia de Software
+    </p>
+
+    <nav class="footer-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#time">Time</a>
+    </nav>
+
+  </footer>
+
+  <!-- ============================================================
+       MODAL — Janela de contato (aparece ao clicar no botão)
+       O CSS esconde com display:none; o JS mostra com display:flex
+       ============================================================ -->
+  <div id="modalContato" class="modal">
+
+    <div class="modal-box">
+
+      <!-- Botão X para fechar: chama fecharContato() no JavaScript -->
+      <button class="fechar" onclick="fecharContato()" aria-label="Fechar">×</button>
+
+      <h2>Contato</h2>
+
+      <div class="contato-item">
+        <div class="label">📧 Email</div>
+        lucasrodriguessantos569@gmail.com
+      </div>
+
+      <div class="contato-item">
+        <div class="label">📱 Telefone</div>
+        (11) 97410-7432
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Script JavaScript externo — vem no final do body para
+       garantir que todos os elementos HTML já foram carregados -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
