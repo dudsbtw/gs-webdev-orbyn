@@ -2,15 +2,13 @@
 
 > Plataforma de análise geoespacial que combina imagens de satélite e inteligência artificial para apoiar o planejamento urbano e rural.
 
-<br>
-
 ## 📌 Sobre o Projeto
 
 A **Orbyn Environment** é uma startup fictícia desenvolvida como solução tecnológica para a **Global Solutions da FIAP**, na disciplina de **Front-End Development**.
 
 O desafio proposto envolve a criação de uma solução conectada à **Indústria Espacial** — e a Orbyn responde a esse desafio com uma plataforma de análise territorial que usa dados de satélites públicos (NASA, ESA, INPE, Copernicus) para ajudar governos, produtores rurais e gestores a tomar decisões mais inteligentes.
 
-<br>
+
 
 ## 🌍 Contexto — Por que o Espaço?
 
@@ -23,7 +21,7 @@ O desafio proposto envolve a criação de uma solução conectada à **Indústri
 
 A Orbyn existe para **transformar esses dados em soluções reais** para cidades e o campo.
 
-<br>
+
 
 ## ✨ Funcionalidades do Site
 
@@ -37,7 +35,7 @@ A Orbyn existe para **transformar esses dados em soluções reais** para cidades
 - **Modal de contato** com fechamento ao clicar fora
 - **Design responsivo** — adaptado para celular, tablet e desktop
 
-<br>
+
 
 ## 🗂️ Estrutura do Projeto
 
@@ -56,7 +54,7 @@ gs-front-orbyn/
         └── 3.avif        ← Imagem: Agricultura
 ```
 
-<br>
+
 
 ## ⚙️ Tecnologias Utilizadas
 
@@ -70,7 +68,7 @@ gs-front-orbyn/
 
 Nenhum framework ou biblioteca externa foi utilizado — **tudo em JavaScript puro.**
 
-<br>
+
 
 ## 🧠 Conceitos de JavaScript Aplicados
 
@@ -86,7 +84,7 @@ Nenhum framework ou biblioteca externa foi utilizado — **tudo em JavaScript pu
 ✅ Math.floor() / toLocaleString() — formatar números
 ```
 
-<br>
+
 
 ## 🚀 Como Rodar
 
@@ -105,7 +103,7 @@ cd gs-front-orbyn/view
 
 > **Dica:** Para uma melhor experiência de desenvolvimento, use a extensão **Live Server** no VS Code. Basta clicar com o botão direito no `index.html` → `Open with Live Server`.
 
-<br>
+
 
 ## 👥 Equipe
 
@@ -119,7 +117,7 @@ Desenvolvido por estudantes de **Engenharia de Software** na **FIAP**:
 | Matheus de Amorim Brito | 572435 |
 | Thiago Gomes Nascimento | 569436 |
 
-<br>
+
 
 ## 📄 Licença
 
