@@ -1,8 +1,8 @@
-# 🛰️ Orbyn — Inteligência Espacial
+#  Orbyn — Inteligência Espacial
 
 > Plataforma de análise geoespacial que combina imagens de satélite e inteligência artificial para apoiar o planejamento urbano e rural.
 
-## 📌 Sobre o Projeto
+##  Sobre o Projeto
 
 A **Orbyn Environment** é uma startup fictícia desenvolvida como solução tecnológica para a **Global Solutions da FIAP**, na disciplina de **Front-End Development**.
 
@@ -10,7 +10,7 @@ O desafio proposto envolve a criação de uma solução conectada à **Indústri
 
 
 
-## 🌍 Contexto — Por que o Espaço?
+## Por que o Espaço?
 
 | Dado | Impacto |
 |------|---------|
@@ -23,7 +23,7 @@ A Orbyn existe para **transformar esses dados em soluções reais** para cidades
 
 
 
-## ✨ Funcionalidades do Site
+##  Funcionalidades do Site
 
 - **Header fixo** com navegação suave por âncoras
 - **Menu hambúrguer** funcional para dispositivos móveis
@@ -37,7 +37,7 @@ A Orbyn existe para **transformar esses dados em soluções reais** para cidades
 
 
 
-## 🗂️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 gs-front-orbyn/
@@ -56,7 +56,7 @@ gs-front-orbyn/
 
 
 
-## ⚙️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 | Tecnologia | Uso |
 |---|---|
@@ -70,7 +70,7 @@ Nenhum framework ou biblioteca externa foi utilizado — **tudo em JavaScript pu
 
 
 
-## 🧠 Conceitos de JavaScript Aplicados
+##  Conceitos de JavaScript Aplicados
 
 ```
 ✅ document.getElementById() / querySelector() / querySelectorAll()
@@ -86,7 +86,7 @@ Nenhum framework ou biblioteca externa foi utilizado — **tudo em JavaScript pu
 
 
 
-## 🚀 Como Rodar
+##  Como Rodar
 
 **Sem instalação necessária.** Basta abrir o arquivo no navegador:
 
@@ -105,7 +105,7 @@ cd gs-front-orbyn/view
 
 
 
-## 👥 Equipe
+##  Equipe
 
 Desenvolvido por estudantes de **Engenharia de Software** na **FIAP**:
 
@@ -119,12 +119,6 @@ Desenvolvido por estudantes de **Engenharia de Software** na **FIAP**:
 
 
 
-## 📄 Licença
+##  Licença
 
 Projeto desenvolvido para fins acadêmicos — **FIAP Global Solutions 2025**.
-
----
-
-<p align="center">
-  Feito com 🛰️ pela equipe <strong>Orbyn</strong>
-</p>
