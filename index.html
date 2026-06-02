@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-tema="escuro">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Orbyn Environment</title>
-
 <link rel="stylesheet" href="css/style.css">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -19,75 +15,53 @@
 
 <header class="cabecalho">
 
-<div class="logo-header">
-<img src="img/orbyn_logo_sem_fundo2.png" alt="Orbyn">
-<span>ORBYN</span>
-</div>
+  <div class="logo-header">
+    <img src="img/orbyn_logo_sem_fundo2.png" alt="Orbyn">
+    <span>ORBYN</span>
+  </div>
 
-<nav class="menu">
-<a href="#sobre">Sobre</a>
-<a href="#solucoes">Soluções</a>
-<a href="#urbano">Urbano</a>
-<a href="#agricultura">Agro</a>
+  <nav class="menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#urbano">Urbano</a>
+    <a href="#agricultura">Agro</a>
 
-<button class="btn-contato" onclick="abrirContato()">
-Contato
-</button>
-</nav>
+    <button class="btn-contato" onclick="abrirContato()">
+      Contato
+    </button>
+  </nav>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-texto">
+  <div class="hero-texto">
+    <span class="tag">Startup Geoespacial</span>
+    <h1>Transformando territórios com inteligência espacial</h1>
+    <p>A Orbyn utiliza imagens de satélite, inteligência artificial e análise territorial para apoiar decisões mais inteligentes em cidades e áreas rurais.</p>
+    <a href="#sobre" class="btn-principal">Conheça a Orbyn</a>
+  </div>
 
-<span class="tag">Startup Geoespacial</span>
-
-<h1>
-Transformando territórios com inteligência espacial
-</h1>
-
-<p>
-A Orbyn utiliza imagens de satélite, inteligência artificial e análise territorial para apoiar decisões mais inteligentes em cidades e áreas rurais.
-</p>
-
-<a href="#sobre" class="btn-principal">
-Conheça a Orbyn
-</a>
-
-</div>
-
-<div class="hero-imagem">
-<img src="img/orbyn_logo_sem_fundo2.png" alt="Logo Orbyn">
-</div>
+  <div class="hero-imagem">
+    <img src="img/orbyn_logo_sem_fundo2.png" alt="Logo Orbyn">
+  </div>
 
 </section>
 
 <section id="sobre" class="sobre-orbyn">
 
-<div class="sobre-texto">
-
-<h2>Sobre a Orbyn</h2>
-
-<p>
-A <strong>Orbyn Environment</strong> é uma startup voltada para análise territorial inteligente, utilizando geotecnologia, inteligência artificial e dados de satélite.
-</p>
-
-<p>
-Nossa plataforma monitora transformações urbanas e rurais em tempo real, identificando riscos ambientais, padrões de crescimento e oportunidades para desenvolvimento sustentável.
-</p>
-
-<p>
-O objetivo é transformar grandes volumes de dados em informações acessíveis para governos, empresas e produtores rurais.
-</p>
-
-</div>
+  <div class="sobre-texto">
+    <h2>Sobre a Orbyn</h2>
+    <p>A <strong>Orbyn Environment</strong> é uma startup voltada para análise territorial inteligente, utilizando geotecnologia, inteligência artificial e dados de satélite.</p>
+    <p>Nossa plataforma monitora transformações urbanas e rurais em tempo real, identificando riscos ambientais, padrões de crescimento e oportunidades para desenvolvimento sustentável.</p>
+    <p>O objetivo é transformar grandes volumes de dados em informações acessíveis para governos, empresas e produtores rurais.</p>
+  </div>
 
 </section>
 
 <section id="stats" class="stats">
 
-<div class="stats">
+  <div class="stats">
 
     <div class="stat-item">
       <div class="stat-numero" data-alvo="1" data-sufixo=" tri">1 tri</div>
@@ -114,138 +88,98 @@ O objetivo é transformar grandes volumes de dados em informações acessíveis 
 </section>
 
 <section id="solucoes" class="secao-destaque">
-
-<img src="img/1.avif" alt="Monitoramento">
-
-<div class="secao-texto">
-
-<span class="secao-tag">Monitoramento</span>
-
-<h2>Análise territorial em tempo real</h2>
-
-<p>
-A base da Orbyn é a tecnologia geoespacial. A plataforma utiliza imagens de satélite, dados geográficos e inteligência artificial para transformar grandes volumes de informações territoriais em mapas, alertas e recomendações estratégicas. Dessa forma, decisões podem ser tomadas com mais rapidez, precisão e embasamento.
-</p>
-
-</div>
-
+  <img src="img/1.avif" alt="Monitoramento">
+  <div class="secao-texto">
+    <span class="secao-tag">Monitoramento</span>
+    <h2>Análise territorial em tempo real</h2>
+    <p>A base da Orbyn é a tecnologia geoespacial. A plataforma utiliza imagens de satélite, dados geográficos e inteligência artificial para transformar grandes volumes de informações territoriais em mapas, alertas e recomendações estratégicas. Dessa forma, decisões podem ser tomadas com mais rapidez, precisão e embasamento.</p>
+  </div>
 </section>
 
 <section id="urbano" class="secao-destaque invertida">
-
-<img src="img/2.avif" alt="Planejamento Urbano">
-
-<div class="secao-texto">
-
-<span class="secao-tag">Urbano</span>
-
-<h2>Planejamento urbano inteligente</h2>
-
-<p>
-No ambiente urbano, a Orbyn monitora o crescimento das cidades e identifica problemas de infraestrutura, ocupação irregular e áreas de risco. As análises ajudam gestores públicos e empresas a planejar melhor investimentos, serviços e expansão urbana de forma mais sustentável
-</p>
-
-</div>
-
+  <img src="img/2.avif" alt="Planejamento Urbano">
+  <div class="secao-texto">
+    <span class="secao-tag">Urbano</span>
+    <h2>Planejamento urbano inteligente</h2>
+    <p>No ambiente urbano, a Orbyn monitora o crescimento das cidades e identifica problemas de infraestrutura, ocupação irregular e áreas de risco. As análises ajudam gestores públicos e empresas a planejar melhor investimentos, serviços e expansão urbana de forma mais sustentável.</p>
+  </div>
 </section>
 
 <section id="agricultura" class="secao-destaque">
-
-<img src="img/3.avif"" alt="Agricultura">
-
-<div class="secao-texto">
-
-<span class="secao-tag">Agro</span>
-
-<h2>Produtividade agrícola monitorada</h2>
-
-<p>
-A Orbyn auxilia produtores rurais por meio do monitoramento de áreas agrícolas utilizando imagens de satélite e inteligência artificial. A plataforma analisa fatores como solo, clima, irrigação e produtividade, identificando riscos e oportunidades para aumentar a eficiência da produção e reduzir desperdícios.
-</p>
-
-</div>
-
+  <img src="img/3.avif" alt="Agricultura">
+  <div class="secao-texto">
+    <span class="secao-tag">Agro</span>
+    <h2>Produtividade agrícola monitorada</h2>
+    <p>A Orbyn auxilia produtores rurais por meio do monitoramento de áreas agrícolas utilizando imagens de satélite e inteligência artificial. A plataforma analisa fatores como solo, clima, irrigação e produtividade, identificando riscos e oportunidades para aumentar a eficiência da produção e reduzir desperdícios.</p>
+  </div>
 </section>
 
 <div id="modalContato" class="modal">
-
-<div class="modal-box">
-
-<span class="fechar" onclick="fecharContato()">&times;</span>
-
-<h2>Contato</h2>
-
-<div class="contato-item">
-    <div class="label"> E-mail</div>
-        eduardo.f.frois.s@gmail.com
+  <div class="modal-box">
+    <span class="fechar" onclick="fecharContato()">&times;</span>
+    <h2>Contato</h2>
+    <div class="contato-item">
+      <div class="label">E-mail</div>
+      eduardo.f.frois.s@gmail.com
     </div>
-
-</div>
+  </div>
 </div>
 
 <section id="time" class="secao-time revelar">
 
-    <h2>Nossa Equipe</h2>
-    <p class="subtitulo">Os engenheiros por trás da Orbyn</p>
+  <h2>Nossa Equipe</h2>
+  <p class="subtitulo">Os engenheiros por trás da Orbyn</p>
 
-    <div class="cards-time">
+  <div class="cards-time">
 
-      <div class="card-pessoa">
-        <!-- Avatar: círculo com a inicial do nome -->
-        <div class="avatar">E</div>
-        <h3>Eduardo Felix Frois Silva</h3>
-        <span>RM 574103</span>
-      </div>
-
-      <div class="card-pessoa">
-        <div class="avatar">G</div>
-        <h3>Gabriel Henique Ongarelli Reis</h3>
-        <span>RM 572636</span>
-      </div>
-
-      <div class="card-pessoa">
-        <div class="avatar">L</div>
-        <h3>Lucas Rodrigues dos Santos</h3>
-        <span>RM 571778</span>
-      </div>
-
-      <div class="card-pessoa">
-        <div class="avatar">M</div>
-        <h3>Matheus de Amorim Brito</h3>
-        <span>RM 572435</span>
-      </div>
-
-      <div class="card-pessoa">
-        <div class="avatar">T</div>
-        <h3>Thiago Gomes Nascimento</h3>
-        <span>RM 569436</span>
-      </div>
-
+    <div class="card-pessoa">
+      <div class="avatar">E</div>
+      <h3>Eduardo Felix Frois Silva</h3>
+      <span>RM 574103</span>
     </div>
 
-  </section>
+    <div class="card-pessoa">
+      <div class="avatar">G</div>
+      <h3>Gabriel Henique Ongarelli Reis</h3>
+      <span>RM 572636</span>
+    </div>
 
-  <button id="btnTopo" class="btnTopo">⬆</button>
+    <div class="card-pessoa">
+      <div class="avatar">L</div>
+      <h3>Lucas Rodrigues dos Santos</h3>
+      <span>RM 571778</span>
+    </div>
 
-  <!-- ============================================================
-       FOOTER — Rodapé do site
-       ============================================================ -->
-  <footer>
+    <div class="card-pessoa">
+      <div class="avatar">M</div>
+      <h3>Matheus de Amorim Brito</h3>
+      <span>RM 572435</span>
+    </div>
 
-    <div class="footer-logo">ORBYN</div>
+    <div class="card-pessoa">
+      <div class="avatar">T</div>
+      <h3>Thiago Gomes Nascimento</h3>
+      <span>RM 569436</span>
+    </div>
 
-    <p class="footer-texto">
-      © 2025 Orbyn Environment · FIAP Global Solutions<br>
-      Engenharia de Software
-    </p>
+  </div>
 
-    <nav class="footer-links">
-      <a href="#sobre">Sobre</a>
-      <a href="#solucoes">Soluções</a>
-      <a href="#time">Time</a>
-    </nav>
+</section>
 
-  </footer>
+<button id="btnTopo" class="btnTopo">⬆</button>
+
+<footer>
+  <div class="footer-logo">ORBYN</div>
+  <p class="footer-texto">
+    © 2026 Orbyn Environment · FIAP Global Solutions<br>
+    Engenharia de Software
+  </p>
+  <nav class="footer-links">
+    <a href="#sobre">Sobre</a>
+    <a href="#solucoes">Soluções</a>
+    <a href="#time">Time</a>
+  </nav>
+</footer>
 
 <script src="js/script.js"></script>
 

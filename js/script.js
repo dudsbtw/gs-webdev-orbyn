@@ -5,7 +5,6 @@ function abrirContato() {
 
 // fecha o modal de contato
 function fecharContato() {
-
   document.getElementById('modalContato').style.display = 'none';
 }
 
@@ -24,7 +23,7 @@ window.addEventListener('scroll', function () {
   const header = document.querySelector('.cabecalho');
 
   if (window.scrollY > 50) {
-    header.style.boxShadow = '0 4px 20px rgba(76, 201, 240, 0.15)';
+    header.style.boxShadow = '0 4px 20px var(--t-glow)';
   } else {
     header.style.boxShadow = 'none';
   }
@@ -45,7 +44,7 @@ window.addEventListener('scroll', function () {
 
   linksNav.forEach(function (link) {
     if (link.getAttribute('href') === '#' + secaoAtual) {
-      link.style.color = '#4cc9f0';
+      link.style.color = 'var(--t-accent)';
     } else {
       link.style.color = '';
     }
@@ -53,13 +52,11 @@ window.addEventListener('scroll', function () {
 });
 
 // animacao de secoes aparecendo ao rolar a pagina
-// adiciona a classe .revelar nas secoes
 const secoesAnimar = document.querySelectorAll('.sobre-orbyn, .stats, .secao-destaque');
-  secoesAnimar.forEach(function (el) {
-    el.classList.add('revelar');
+secoesAnimar.forEach(function (el) {
+  el.classList.add('revelar');
 });
 
-// injeta o css para o efeito funcionar
 const estiloReveal = document.createElement('style');
 estiloReveal.textContent = `
   .revelar { opacity: 0; transform: translateY(25px); transition: opacity 0.6s, transform 0.6s; }
@@ -67,7 +64,6 @@ estiloReveal.textContent = `
 `;
 document.head.appendChild(estiloReveal);
 
-// verifica quais elementos ja estao visiveis na tela
 function verificarReveal() {
   document.querySelectorAll('.revelar').forEach(function (el) {
     if (el.getBoundingClientRect().top < window.innerHeight - 80) {
@@ -118,7 +114,6 @@ function verificarAnimacaoStats() {
   }
 }
 
-// roda uma vez ao carregar
 verificarReveal();
 verificarAnimacaoStats();
 window.addEventListener('scroll', function () {
@@ -126,16 +121,174 @@ window.addEventListener('scroll', function () {
   verificarAnimacaoStats();
 });
 
-// recebe o id do botao de voltar pro topo
 const btnTopo = document.getElementById('btnTopo');
 
-// mostra o botao ao rolar mais de 400px
 window.addEventListener('scroll', function () {
   btnTopo.classList.toggle('ativo', window.scrollY > 400);
 });
 
-// sobe a pag com o click
 btnTopo.addEventListener('click', function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// ============================================================
+// TEMAS
+// Cada tema define suas cores E a cor do botão voltar ao topo
+// A troca é feita inteiramente pelo JS via variáveis CSS no :root
+// ============================================================
+const temas = {
+  escuro: {
+    nome: 'Escuro',
+    cor:  '#0d1a2e',
+    vars: {
+      '--t-bg':           '#06080f',
+      '--t-card':         '#0d1320',
+      '--t-header':       'rgba(6,8,15,0.85)',
+      '--t-text':         '#ffffff',
+      '--t-texto2':       '#c8d8ff',
+      '--t-texto3':       '#d5def8',
+      '--t-accent':       '#4cc9f0',
+      '--t-borda':        'rgba(76,201,240,0.15)',
+      '--t-modal':        '#111827',
+      '--t-btn-text':     '#000000',
+      '--t-glow':         'rgba(76,201,240,0.25)',
+      '--t-btn-topo-bg':  '#4cc9f0',
+      '--t-btn-topo-cor': '#000000',
+    }
+  },
+
+  branco: {
+    nome: 'Azul claro',
+    cor:  '#7dd8f5',
+    vars: {
+      '--t-bg':           '#0d1f35',
+      '--t-card':         '#152840',
+      '--t-header':       'rgba(13,31,53,0.88)',
+      '--t-text':         '#e8f4ff',
+      '--t-texto2':       '#a8cce8',
+      '--t-texto3':       '#bdd8f0',
+      '--t-accent':       '#7dd8f5',
+      '--t-borda':        'rgba(125,216,245,0.18)',
+      '--t-modal':        '#1a304d',
+      '--t-btn-text':     '#000000',
+      '--t-glow':         'rgba(125,216,245,0.22)',
+      '--t-btn-topo-bg':  '#7dd8f5',
+      '--t-btn-topo-cor': '#000000',
+    }
+  },
+
+  verde: {
+    nome: 'Verde',
+    cor:  '#4cf0a0',
+    vars: {
+      '--t-bg':           '#060f09',
+      '--t-card':         '#0a1f10',
+      '--t-header':       'rgba(6,15,9,0.85)',
+      '--t-text':         '#ffffff',
+      '--t-texto2':       '#c8ffd8',
+      '--t-texto3':       '#d5f8e2',
+      '--t-accent':       '#4cf0a0',
+      '--t-borda':        'rgba(76,240,160,0.15)',
+      '--t-modal':        '#081a0c',
+      '--t-btn-text':     '#000000',
+      '--t-glow':         'rgba(76,240,160,0.25)',
+      '--t-btn-topo-bg':  '#f59e0b',
+      '--t-btn-topo-cor': '#000000',
+    }
+  },
+
+  concreto: {
+    nome: 'Concreto',
+    cor:  '#d4a853',
+    vars: {
+      '--t-bg':           '#1a1a1a',
+      '--t-card':         '#262626',
+      '--t-header':       'rgba(26,26,26,0.92)',
+      '--t-text':         '#f0ebe3',
+      '--t-texto2':       '#b0a090',
+      '--t-texto3':       '#c8bfb0',
+      '--t-accent':       '#d4a853',
+      '--t-borda':        'rgba(212,168,83,0.2)',
+      '--t-modal':        '#2a2a2a',
+      '--t-btn-text':     '#000000',
+      '--t-glow':         'rgba(212,168,83,0.25)',
+      '--t-btn-topo-bg':  '#d4a853',
+      '--t-btn-topo-cor': '#000000',
+    }
+  }
+};
+
+// injeta o CSS que conecta as variáveis de tema aos elementos do site
+// o .btnTopo também usa variáveis de tema, sem tocar no style.css
+const estiloTema = document.createElement('style');
+estiloTema.textContent = `
+  body                         { background: var(--t-bg)           !important; color: var(--t-text)     !important; }
+  .cabecalho                   { background: var(--t-header)        !important; }
+  .sobre-texto                 { background: var(--t-card)          !important; border-color: var(--t-borda) !important; }
+  .sobre-texto h2              { color:      var(--t-accent)        !important; }
+  .sobre-texto p               { color:      var(--t-texto3)        !important; }
+  .tag, .secao-tag             { border-color: var(--t-accent)      !important; color: var(--t-accent)   !important; }
+  .btn-contato, .btn-principal { background: var(--t-accent)        !important; color: var(--t-btn-text) !important; }
+  .menu a                      { color:      var(--t-texto2)        !important; }
+  .menu a:hover                { color:      var(--t-accent)        !important; }
+  .hero p, .secao-texto p      { color:      var(--t-texto2)        !important; }
+  .modal-box                   { background: var(--t-modal)         !important; }
+  .hero-imagem img             { filter: drop-shadow(0 0 25px var(--t-glow)) !important; }
+  .btnTopo                     { background: var(--t-btn-topo-bg)   !important; color: var(--t-btn-topo-cor) !important; }
+`;
+document.head.appendChild(estiloTema);
+
+// aplica as variáveis do tema escolhido no :root
+function aplicarTema(chave) {
+  const tema = temas[chave];
+
+  Object.entries(tema.vars).forEach(function ([propriedade, valor]) {
+    document.documentElement.style.setProperty(propriedade, valor);
+  });
+
+  document.querySelectorAll('.btn-tema').forEach(function (btn) {
+    btn.style.outline = btn.dataset.tema === chave
+      ? '2px solid rgba(255,255,255,0.8)'
+      : '2px solid transparent';
+  });
+}
+
+// cria os botões de tema no meio da tela (lado direito)
+const painelTemas = document.createElement('div');
+painelTemas.style.cssText = `
+  position: fixed; top: 62%; right: 30px;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column;
+  gap: 10px; z-index: 998;
+`;
+
+Object.keys(temas).forEach(function (chave) {
+  const btn = document.createElement('button');
+  btn.className    = 'btn-tema';
+  btn.dataset.tema = chave;
+  btn.title        = temas[chave].nome;
+  btn.style.cssText = `
+    width: 22px; height: 22px; border-radius: 50%;
+    background: ${temas[chave].cor};
+    border: 2px solid rgba(100,100,100,0.4);
+    cursor: pointer;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  `;
+  btn.addEventListener('mouseenter', function () {
+    btn.style.transform = 'scale(1.28)';
+    btn.style.boxShadow = '0 0 8px rgba(255,255,255,0.25)';
+  });
+  btn.addEventListener('mouseleave', function () {
+    btn.style.transform = 'scale(1)';
+    btn.style.boxShadow = 'none';
+  });
+  btn.addEventListener('click', function () { aplicarTema(chave); });
+  painelTemas.appendChild(btn);
+});
+
+document.body.appendChild(painelTemas);
+
+// ativa o tema escuro por padrão
+aplicarTema('escuro');
