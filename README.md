@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="view/img/orbyn_logo_sem_fundo2.png" alt="Orbyn Logo" width="120"/>
+<img src="img/orbyn_logo_sem_fundo2.png" alt="Orbyn Logo" width="120"/>
 
 # ORBYN Environment
 
