@@ -188,7 +188,7 @@ const temas = {
       '--t-modal':        '#081a0c',
       '--t-btn-text':     '#000000',
       '--t-glow':         'rgba(76,240,160,0.25)',
-      '--t-btn-topo-bg':  '#f59e0b',
+      '--t-btn-topo-bg':  '#4cf0a0',
       '--t-btn-topo-cor': '#000000',
     }
   },
