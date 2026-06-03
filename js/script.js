@@ -131,11 +131,7 @@ btnTopo.addEventListener('click', function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ============================================================
-// TEMAS
-// Cada tema define suas cores E a cor do botão voltar ao topo
-// A troca é feita inteiramente pelo JS via variáveis CSS no :root
-// ============================================================
+// temas
 const temas = {
   escuro: {
     nome: 'Escuro',
@@ -296,7 +292,7 @@ function aplicarTema(chave) {
 // cria os botões de tema — lado esquerdo, centralizado verticalmente
 const painelTemas = document.createElement('div');
 painelTemas.style.cssText = `
-  position: fixed; top: 50%; right: 30px;
+  position: fixed; top: 55%; right: 30px;
   transform: translateY(-50%);
   display: flex; flex-direction: column;
   gap: 10px; z-index: 998;
