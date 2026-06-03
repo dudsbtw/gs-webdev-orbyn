@@ -218,23 +218,63 @@ const temas = {
   }
 };
 
-// injeta o CSS que conecta as variáveis de tema aos elementos do site
-// o .btnTopo também usa variáveis de tema, sem tocar no style.css
+// injeta o CSS que conecta as variáveis de tema a TODOS os elementos do site
 const estiloTema = document.createElement('style');
 estiloTema.textContent = `
-  body                         { background: var(--t-bg)           !important; color: var(--t-text)     !important; }
-  .cabecalho                   { background: var(--t-header)        !important; }
-  .sobre-texto                 { background: var(--t-card)          !important; border-color: var(--t-borda) !important; }
-  .sobre-texto h2              { color:      var(--t-accent)        !important; }
-  .sobre-texto p               { color:      var(--t-texto3)        !important; }
-  .tag, .secao-tag             { border-color: var(--t-accent)      !important; color: var(--t-accent)   !important; }
-  .btn-contato, .btn-principal { background: var(--t-accent)        !important; color: var(--t-btn-text) !important; }
-  .menu a                      { color:      var(--t-texto2)        !important; }
-  .menu a:hover                { color:      var(--t-accent)        !important; }
-  .hero p, .secao-texto p      { color:      var(--t-texto2)        !important; }
-  .modal-box                   { background: var(--t-modal)         !important; }
+  /* Base */
+  body                         { background: var(--t-bg)            !important; color: var(--t-text)          !important; }
+
+  /* Header e nav */
+  .cabecalho                   { background: var(--t-header)         !important; }
+  .menu a                      { color:      var(--t-texto2)         !important; }
+  .menu a:hover                { color:      var(--t-accent)         !important; }
+
+  /* Botões */
+  .btn-contato, .btn-principal { background: var(--t-accent)         !important; color: var(--t-btn-text)     !important; }
+  .btnTopo                     { background: var(--t-btn-topo-bg)    !important; color: var(--t-btn-topo-cor) !important; }
+
+  /* Hero */
+  .tag, .secao-tag             { border-color: var(--t-accent)       !important; color: var(--t-accent)       !important; }
+  .hero p                      { color:        var(--t-texto2)       !important; }
   .hero-imagem img             { filter: drop-shadow(0 0 25px var(--t-glow)) !important; }
-  .btnTopo                     { background: var(--t-btn-topo-bg)   !important; color: var(--t-btn-topo-cor) !important; }
+
+  /* Stats */
+  .stat-numero                 { color:      var(--t-accent)         !important; }
+  .stat-descricao              { color:      var(--t-texto2)         !important; }
+
+  /* Seção Sobre */
+  .sobre-texto                 { background: var(--t-card)           !important; border-color: var(--t-borda) !important; }
+  .sobre-texto h2              { color:      var(--t-accent)         !important; }
+  .sobre-texto p               { color:      var(--t-texto3)         !important; }
+
+  /* Seções de destaque */
+  .secao-texto h2              { color:      var(--t-text)           !important; }
+  .secao-texto p               { color:      var(--t-texto2)         !important; }
+
+  /* Seção do time */
+  .secao-time                  { background: var(--t-header)         !important; border-color: var(--t-borda) !important; }
+  .secao-time h2               { color:      var(--t-accent)         !important; }
+  .secao-time .subtitulo       { color:      var(--t-texto2)         !important; }
+
+  /* Cards do time */
+  .card-pessoa                 { background: var(--t-card)           !important; border-color: var(--t-borda) !important; }
+  .card-pessoa h3              { color:      var(--t-text)           !important; }
+  .card-pessoa span            { color:      var(--t-accent)         !important; }
+  .avatar                      { color:      var(--t-accent)         !important; border-color: var(--t-borda) !important; }
+
+  /* Modal de contato */
+  .modal-box                   { background: var(--t-modal)          !important; }
+  .modal-box h2                { color:      var(--t-accent)         !important; }
+  .fechar                      { color:      var(--t-texto2)         !important; }
+  .fechar:hover                { color:      var(--t-accent)         !important; }
+  .contato-item                { background: var(--t-card)           !important; color: var(--t-texto3)       !important; border-color: var(--t-borda) !important; }
+  .contato-item .label         { color:      var(--t-accent)         !important; }
+
+  /* Footer */
+  .footer-logo                 { color:      var(--t-accent)         !important; }
+  .footer-texto                { color:      var(--t-texto2)         !important; }
+  .footer-links a              { color:      var(--t-texto2)         !important; }
+  .footer-links a:hover        { color:      var(--t-accent)         !important; }
 `;
 document.head.appendChild(estiloTema);
 
@@ -253,10 +293,10 @@ function aplicarTema(chave) {
   });
 }
 
-// cria os botões de tema no meio da tela (lado direito)
+// cria os botões de tema — lado esquerdo, centralizado verticalmente
 const painelTemas = document.createElement('div');
 painelTemas.style.cssText = `
-  position: fixed; top: 62%; right: 30px;
+  position: fixed; top: 50%; right: 30px;
   transform: translateY(-50%);
   display: flex; flex-direction: column;
   gap: 10px; z-index: 998;
