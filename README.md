@@ -64,7 +64,6 @@ gs-front-orbyn/
 | **CSS3** | Estilização, animações e responsividade |
 | **JavaScript (ES6)** | Interatividade e manipulação do DOM |
 | **Google Fonts** | Tipografia: Orbitron + Inter |
-| **SVG** | Ilustração inline do satélite na seção Hero |
 
 Nenhum framework ou biblioteca externa foi utilizado — **tudo em JavaScript puro.**
 
