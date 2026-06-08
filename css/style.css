@@ -182,7 +182,6 @@ img{
     filter:drop-shadow(0 0 25px rgba(76,201,240,.3));
 }
 
-/* CORREÇÃO: 1fr em vez de 470px fixo */
 .stats{
     display:grid;
     grid-template-columns:repeat(4, 1fr);
@@ -201,7 +200,6 @@ img{
     border-right:none;
 }
 
-/* CORREÇÃO: var(--fonte-titulo) e var(--azul) não estavam definidos */
 .stat-numero{
     font-family:'Orbitron',sans-serif;
     font-size:44px;
@@ -210,7 +208,6 @@ img{
     margin-bottom:10px;
 }
 
-/* CORREÇÃO: var(--cinza) não estava definido */
 .stat-descricao{
     font-size:13px;
     color:#c8d8ff;
@@ -313,7 +310,7 @@ img{
     font-family:'Orbitron',sans-serif;
 }
 
-/* CORREÇÃO: var(--cartao) não estava definido */
+
 .contato-item{
     background:#0d1320;
     padding:14px 18px;
@@ -347,12 +344,10 @@ img{
     line-height:1;
 }
 
-/* CORREÇÃO: var(--azul) não estava definido */
 .fechar:hover{
     color:#4cc9f0;
 }
 
-/* CORREÇÃO: var(--fonte-titulo), var(--azul) e var(--cinza) não estavam definidos */
 .secao-time{
     padding:100px 8%;
     text-align:center;
@@ -380,7 +375,6 @@ img{
     justify-content:center;
 }
 
-/* CORREÇÃO: var(--cartao) não estava definido */
 .card-pessoa{
     background:#0d1320;
     border:1px solid rgba(76,201,240,.14);
@@ -396,7 +390,6 @@ img{
     transform:translateY(-8px);
 }
 
-/* CORREÇÃO: var(--fonte-titulo) e var(--azul) não estavam definidos */
 .avatar{
     width:66px;
     height:66px;
@@ -413,7 +406,6 @@ img{
     font-weight:700;
 }
 
-/* CORREÇÃO: var(--branco) não estava definido */
 .card-pessoa h3{
     font-size:14px;
     font-weight:600;
@@ -437,7 +429,6 @@ footer{
     gap:16px;
 }
 
-/* CORREÇÃO: var(--fonte-titulo) e var(--azul) não estavam definidos */
 .footer-logo{
     font-family:'Orbitron',sans-serif;
     font-size:16px;
@@ -464,7 +455,6 @@ footer{
     transition:color .3s;
 }
 
-/* CORREÇÃO: var(--azul) não estava definido */
 .footer-links a:hover{
     color:#4cc9f0;
 }
@@ -503,7 +493,6 @@ footer{
         padding:30px;
     }
 
-    /* stats em 2 colunas no tablet */
     .stats{
         grid-template-columns:repeat(2, 1fr);
     }
@@ -521,7 +510,6 @@ footer{
 
 @media(max-width:500px){
 
-    /* stats em 1 coluna no celular */
     .stats{
         grid-template-columns:1fr;
     }
