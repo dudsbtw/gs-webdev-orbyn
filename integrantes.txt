@@ -1,0 +1,11 @@
+👥 Desenvolvedores do projeto:
+
+-> Eduardo Felix Frois Silva — RM 574103
+-> Gabriel Henrique Ongarelli Reis — RM 572636
+-> Lucas Rodrigues dos Santos — RM 571778
+-> Matheus de Amorim Brito — RM 572435
+-> Thiago Gomes Nascimento — RM 569436
+
+===============================================
+
+Link para acesso ao repositório no GitHub: https://github.com/dudsbtw/gs-webdev-orbyn
