@@ -133,4 +133,4 @@ Desenvolvido por estudantes de **Engenharia de Software** na **FIAP**:
 
 ## Licença
 
-Projeto desenvolvido para fins acadêmicos — **FIAP Global Solutions 2025**.
+Projeto desenvolvido para fins acadêmicos — **FIAP Global Solutions 2026**.
